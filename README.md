@@ -20,7 +20,7 @@ pip install -e .
 ```
 
 ## Some known issues
-
+### tiff errors
 If you are using conda on windows you might get an error:
 > tempfile.tif: Cannot read TIFF header.
 
