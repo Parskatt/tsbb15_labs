@@ -9,6 +9,7 @@ from mpl_toolkits.axes_grid1 import ImageGrid
 
 import scipy.interpolate
 
+from tsbb15_labs import IMAGE_DIRECTORY
 
 def load_image_grayscale(path):
     "Load a grayscale image by path"

@@ -23,7 +23,7 @@ from matplotlib.patches import ConnectionPatch
 from scipy.ndimage.filters import maximum_filter
 import PIL
 
-# from .lab2 import load_image_grayscale
+from tsbb15_labs import IMAGE_DIRECTORY
 
 
 # Handle both OpenCV 2.4 and 3+
@@ -33,13 +33,7 @@ except AttributeError:
     IMREAD_COLOR = cv2.CV_LOAD_IMAGE_COLOR
 
 
-try:
-    LAB3_IMAGE_DIRECTORY = Path(os.environ['CVL_LAB3_IMAGEDIR'])
-except KeyError:
-    LAB3_IMAGE_DIRECTORY = Path('/courses/TSBB15/images/lab3')
-
-if not LAB3_IMAGE_DIRECTORY.exists():
-    raise RuntimeError("Image directory '{}' does not exist. Try setting the CVL_LAB3_IMAGEDIR environment variable".format(LAB3_IMAGE_DIRECTORY))
+LAB3_IMAGE_DIRECTORY = os.path.join(IMAGE_DIRECTORY,'lab3')
 
 def load_image_grayscale(path):
     "Load a grayscale image by path"
