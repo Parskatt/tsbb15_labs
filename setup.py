@@ -26,7 +26,7 @@ def _load_requirements(path_dir = '.', file_name = 'requirements.txt', comment_c
 
 setuptools.setup(
     name="tsbb15_labs",
-    version="0.0.2",
+    version="0.0.5",
     author="Johan Edstedt",
     author_email="johan.edstedt@liu.se",
     description="Convenience functions for the tsbb15 labs.",
@@ -42,4 +42,5 @@ setuptools.setup(
     setup_requires=[],
     install_requires=_load_requirements(),
     python_requires='>=3.6',
+    package_data={'tsbb15_labs': ['images/*','images/chessboard/*','images/lab3/*']}
 )
