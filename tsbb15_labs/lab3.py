@@ -33,12 +33,11 @@ except AttributeError:
     IMREAD_COLOR = cv2.CV_LOAD_IMAGE_COLOR
 
 
-LAB3_IMAGE_DIRECTORY = os.path.join(IMAGE_DIRECTORY,'lab3')
+LAB3_IMAGE_DIRECTORY = Path(os.path.join(IMAGE_DIRECTORY,'lab3'))
 
 def load_image_grayscale(path):
     "Load a grayscale image by path"
     return np.asarray(PIL.Image.open(path).convert('L'))
-
 
 def load_stereo_pair():
     """Load stereo image pair
