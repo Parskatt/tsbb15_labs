@@ -26,7 +26,7 @@ def _load_requirements(path_dir = '.', file_name = 'requirements.txt', comment_c
 
 setuptools.setup(
     name="tsbb15_labs",
-    version="0.0.6-alpha",
+    version="0.0.6",
     author="Johan Edstedt",
     author_email="johan.edstedt@liu.se",
     description="Convenience functions for the tsbb15 labs.",
