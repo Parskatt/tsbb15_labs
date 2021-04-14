@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 
 import numpy as np
-import PIL.Image
+from PIL import Image
 
 from tsbb15_labs import IMAGE_DIRECTORY
 
@@ -15,7 +15,7 @@ def load_lab_image(filename):
     >>> img = load_lab_image('cornertest.png')    
     """
     path = str(IMAGE_DIRECTORY / filename)
-    return np.asarray(PIL.Image.open(path).convert('L'))
+    return np.asarray(Image.open(path).convert('L'))
 
 
 def get_cameraman():

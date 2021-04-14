@@ -1,7 +1,7 @@
 # coding=utf-8
 import numpy as np
 
-import PIL.Image
+from PIL import Image
 
 import matplotlib.pyplot as plt
 import matplotlib.colors
@@ -13,7 +13,7 @@ from tsbb15_labs import IMAGE_DIRECTORY
 
 def load_image_grayscale(path):
     "Load a grayscale image by path"
-    return np.asarray(PIL.Image.open(path).convert('L'))
+    return np.asarray(Image.open(path).convert('L'))
 
 
 def image_grid(images, nrows=1, ncols=None, separate_colorbars=False, share_all=False, imshow_opts={}):

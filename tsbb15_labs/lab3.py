@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.patches import ConnectionPatch
 from scipy.ndimage.filters import maximum_filter
-import PIL
+from PIL import Image
 
 from tsbb15_labs import IMAGE_DIRECTORY
 
@@ -37,7 +37,7 @@ LAB3_IMAGE_DIRECTORY = Path(os.path.join(IMAGE_DIRECTORY,'lab3'))
 
 def load_image_grayscale(path):
     "Load a grayscale image by path"
-    return np.asarray(PIL.Image.open(path).convert('L'))
+    return np.asarray(Image.open(path).convert('L'))
 
 def load_stereo_pair():
     """Load stereo image pair
